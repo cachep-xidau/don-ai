@@ -1,13 +1,10 @@
 # don-ai
 
-Subset chia se de cai nhanh 2 skill Don cho dong nghiep, kem `AGENTS.md` va cac rule file ma no tham chieu.
+Subset chia se de cai nhanh 2 skill Don cho dong nghiep, kem `AGENTS.md` repo-specific.
 
 ## Goi nay chua gi
 
 - `AGENTS.md`
-- `.claude/rules/development-rules.md`
-- `.claude/rules/primary-workflow.md`
-- `.claude/rules/documentation-management.md`
 - `skills/don.figma/`
 - `skills/don.artifact/`
 
@@ -43,12 +40,11 @@ cp -R skills/don.figma "$HOME/.agents/skills/"
 cp -R skills/don.artifact "$HOME/.agents/skills/"
 ```
 
-Neu can dung rule workspace:
+Neu can tham khao instruction file cua repo nay:
 
 ```bash
-cp AGENTS.md /path/to/your/project/AGENTS.md
-mkdir -p /path/to/your/project/.claude/rules
-cp -R .claude/rules/* /path/to/your/project/.claude/rules/
+# doc va merge co chu dich
+cat AGENTS.md
 ```
 
 ### Cach 2: Vendor vao repo noi bo
@@ -57,9 +53,6 @@ cp -R .claude/rules/* /path/to/your/project/.claude/rules/
 mkdir -p /path/to/your/project/skills
 cp -R skills/don.figma /path/to/your/project/skills/
 cp -R skills/don.artifact /path/to/your/project/skills/
-cp AGENTS.md /path/to/your/project/AGENTS.md
-mkdir -p /path/to/your/project/.claude/rules
-cp -R .claude/rules/* /path/to/your/project/.claude/rules/
 ```
 
 ## Cach dung
@@ -95,11 +88,6 @@ Doc them:
 
 ```text
 .
-├── .claude
-│   └── rules
-│       ├── development-rules.md
-│       ├── documentation-management.md
-│       └── primary-workflow.md
 ├── AGENTS.md
 ├── README.md
 └── skills
@@ -118,8 +106,8 @@ Doc them:
 - `don.figma` uu tien scope hep, can `node-id` ro rang
 - `don.artifact` chi viet mot artifact moi lan
 - Artifact ky thuat la explicit-only. Khong hoi mo ho "design docs" roi tu mo rong scope
-- `AGENTS.md` trong repo nay la ban share tu workspace goc. Co the qua chat voi mot so repo nho. Can review truoc khi ap dung team-wide
-- 3 file trong `.claude/rules/` duoc bundle chi de tranh broken reference. Chung khong bien repo nay thanh full workspace template
+- `AGENTS.md` trong repo nay da duoc cat lai de chi phan anh scope cua repo share pack nay
+- Khong copy `AGENTS.md` mu sang repo khac. Chi doc va merge co chu dich neu that su can
 
 ## Sync cap nhat
 
