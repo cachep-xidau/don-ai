@@ -55,6 +55,22 @@ cp -R skills/don.figma /path/to/your/project/skills/
 cp -R skills/don.artifact /path/to/your/project/skills/
 ```
 
+### Cach 3: Cai dat duoi dang slash command cho Claude Code / Gemini (Khuyen dung)
+
+De co the su dung `/don.artifact` va `/don.figma` nhu cac slash command tich hop san, ban cac co the tao symlink truc tiep vao thu muc `.claude/skills` hoac them bang CLI.
+
+**Tuy chon A: Tao symlink vao project**
+```bash
+ln -s /path/to/don-ai/skills/don.artifact .claude/skills/don.artifact
+ln -s /path/to/don-ai/skills/don.figma .claude/skills/don.figma
+```
+
+**Tuy chon B: Them bang CLI**
+```bash
+claude config add skill don.artifact "/path/to/don-ai/skills/don.artifact"
+claude config add skill don.figma "/path/to/don-ai/skills/don.figma"
+```
+
 ## Cach dung
 
 ### `don.figma`
