@@ -82,7 +82,7 @@ Do not invent an alternate fetch flow if the reference file already covers the c
 Save to `{output_folder}/figma-data-{node-id}.md`
 
 ```markdown
-# Figma Data: [Screen/Component Name]
+# Figma Data: [Screen/Component Name] (Must capture the exact title of the screen, e.g., "7-1. Mypage Top")
 
 **Date:** [DATE]
 **Node ID:** [node-id]
@@ -122,6 +122,7 @@ Save to `{output_folder}/figma-data-{node-id}.md`
 Before passing Figma data to don.artifact:
 - [ ] `accessState` confirmed `gated=false`
 - [ ] Node-id matches the screen/component requested
+- [ ] Screen/Component title captured exactly as it appears in Figma (e.g., "7-1. Mypage Top")
 - [ ] Text labels captured (exact strings, not paraphrase)
 - [ ] CTA buttons and states documented
 - [ ] Partial or blocked areas explicitly called out

@@ -42,7 +42,7 @@ That file owns:
 
 1. Confirm artifact type and requirements context.
 2. Load exactly one matching reference file.
-3. Draft the artifact from that reference only.
+3. Draft the artifact from that reference only. When drafting from a Figma screen, you MUST explicitly write the exact name of that screen and attach a Figma hyperlink to it.
 4. Reload the same reference and run its self-review checklist.
 5. Fix violations before output.
 6. If the user asked vaguely for "design docs" or "solution docs", stop and force artifact selection instead of choosing a package silently.
@@ -67,6 +67,7 @@ That file owns:
 - Do not generate ERD, Use Case, or Sequence unless explicitly requested.
 - Do not widen a single-artifact request into a multi-artifact package.
 - Do not collapse weak context into facts.
+- Explicitly write the exact name of the Figma screen and attach a hyperlink to it if drafting from Figma data.
 - Route requirements analysis asks to `don.analysis`.
 - Route scoped Figma extraction asks to `don.figma`.
 - Preserve the local reference structure and self-review rules.
